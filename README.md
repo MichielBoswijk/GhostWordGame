@@ -33,10 +33,10 @@ The user is first presented with the initial screen (Screen 1). From here it has
 
 ![First three screens](/Sketches/initial_three_screens.JPG?raw=true "Sketch 1.")
 
-![Second three screens](Sketches/second_three_screens.JPG)
+![Second three screens](/Sketches/second_three_screens.JPG)
 
 ![Extra screens](/Sketches/extra_screens.JPG)
 
 ### Acknowledgements
 
-* Icons designed by Mees Daalder
+* (Future) Icons designed by Mees Daalder
