@@ -31,11 +31,11 @@ The user is first presented with the initial screen (Screen 1). From here it has
 
 ##### Sketches:
 
-![First three screens](/Sketches/initial_three_screens.jpg?raw=true "Sketch 1.")
+![First three screens](/Sketches/initial_three_screens.JPG?raw=true "Sketch 1.")
 
-![Second three screens](/Sketches/second_three_screens.jpg)
+![Second three screens](Sketches/second_three_screens.JPG)
 
-![Extra screens](/Sketches/extra_screens.jpg)
+![Extra screens](/Sketches/extra_screens.JPG)
 
 ### Acknowledgements
 
