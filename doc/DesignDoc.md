@@ -41,6 +41,8 @@ This is a design document for an implementation of the Ghost game (https://en.wi
 
 ![interactions](/doc/Sketches/interactions.jpg)
 
+One (or two) APIs will likely be used for the Dutch and English dictionaries.
+
 ## Visual Representation
 
 Color Palette: Grey/Green or Grey/Orange (two themes)
