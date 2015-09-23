@@ -9,7 +9,7 @@ This is a design document for an implementation of the Ghost game (https://en.wi
 
 ##### IntroScreen
 
-![Intro](/Sketches/intro.jpg)
+![Intro](/doc/Sketches/intro.jpg)
 
 ##### Highscores
 
