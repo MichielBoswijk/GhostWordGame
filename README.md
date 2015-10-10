@@ -1,4 +1,4 @@
-# Ghost Word Game Application Proposal
+# Ghost Word Game
 
 * Michiel Boswijk, michiel.boswijk@gmail.com
 * University of Amsterdam, 10332553
