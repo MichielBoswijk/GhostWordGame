@@ -1,6 +1,62 @@
 <resources>
-    <string name="app_name">GhostWordGame</string>
+    <string name="app_name">Ghost Word Game</string>
+    <string name="title_activity_name_input">Choose a name</string>
+
+    <string name="ack">I would like to thank my friend Mees Daalder
+                        for designing any icons that are not listed below.\n\n
+                        Exit Icon: Designed by Tom Medley on \`thenounproject.com\'\n\n
+                        Check Icon: Designed by Siddharth Dasari on \`thenounproject.com\'</string>
+    <string name="htp">The Ghost Word Game is played with two people. In turns, the players
+                        must enter a letter that together slowly forms a word. The objective of the
+                        game is to add a letter so that no word is formed, but keeping in mind that a word could still be formed.\n\n
+                        If your opponent makes a word, when the word contains more than three characters, you win a round!
+                        This means that you can not lose if you make a word consisting of 3 characters or less. However, if
+                        those characters are not the beginning of a word (like \'zox\'), you still lose a round.\n\n
+                        After you won a round, a point is added to your score which can be viewed in the highscores menu.</string>
+    <string name="exit">Are you sure you want to quit?</string>
+    <string name="cancel">No</string>
+    <string name="yes">Yes</string>
+    <string name="got_it">Got it!</string>
+    <string name="ack_title">Acknowledgements</string>
+    <string name="htp_title">How to Play</string>
+    <string name="confirm">Confirm</string>
+    <string name="restore">Do you want to reload your previous game?</string>
+    <string name="delete">Are you sure you want to delete all Names and Highscores?</string>
+
+    <string name="action_restart">Restart Game</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_ack">Acknowledgements</string>
+    <string name="action_exit">Exit</string>
+    <string name="action_intro">Main Menu</string>
+    <string name="action_highscores">Highscores</string>
+    <string name="action_htp">How to Play</string>
+    <string name="action_new">New Game</string>
+    <string name="action_names">Change Names</string>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#333333</color>
+    <color name="green">#5EA516</color>
+    <color name="light_grey">#AAAAAA</color>
+    <color name="orange">#E05B02</color>
+
+
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_game_play">Gameplay</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_highscores">Highscores</string>
+    <string name="title_activity_winner_screen">WinnerScreen</string>
+    <string name="deleted_toast">Data deleted</string>
+    <string name="toast_single_letter">Please enter a single letter</string>
+    <string name="toast_dict">Error opening dictionary, please try selecting a different language.</string>
+    <string name="toast_different_names">Please select different names.</string>
+    <string name="toast_confirm_names">Please confirm name(s) by clicking the check mark</string>
+    <string name="toast_enter_name">Please both select/enter a name.</string>
+    <string name="toast_empty">Please enter a name in the text field</string>
+    <string name="toast_too_many">Too many characters</string>
+    <string name="toast_letters_only">Please only use letters (and no spaces).</string>
+    <string name="toast_no_players">No Previous Players in Memory</string>
+
+
 </resources>

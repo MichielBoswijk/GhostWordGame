@@ -9,37 +9,37 @@ This is a design document for an implementation of the Ghost game (https://en.wi
 
 ##### IntroScreen
 
-![Intro](/Sketches/intro.JPG)
+![Intro](/doc/Sketches/intro.jpg)
 
 ##### Highscores
 
-![Highscores](/Sketches/highscores.JPG)
+![Highscores](/doc/Sketches/highscores.jpg)
 
 ##### Settings
 
-![Settings](/Sketches/settings.JPG)
+![Settings](/doc/Sketches/settings.jpg)
 
 ##### NameInput
 
-![Names](/Sketches/names.JPG)
+![Names](/doc/Sketches/names.jpg)
 
 ##### GameScreen
 
-![Game](/Sketches/game.JPG)
+![Game](/doc/Sketches/game.jpg)
 
 ##### WinnerScreen
 
-![Winner](/Sketches/winner.JPG)
+![Winner](/doc/Sketches/winner.jpg)
 
 ## Additional Classes
 
 ##### Classes with some variables / functions
 
-![Classes](/Sketches/classes.JPG)
+![Classes](/doc/Sketches/classes.jpg)
 
 ##### Some interactions between classes
 
-![interactions](/Sketches/interactions.JPG)
+![interactions](/doc/Sketches/interactions.jpg)
 
 ## Visual Representation
 

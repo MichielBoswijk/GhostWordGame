@@ -1,0 +1,188 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.michielboswijk.ghostwordgame.NameInput"
+    android:background="@color/black"
+    android:weightSum="1.0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:layout_marginTop="5dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="@color/grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Player 1"
+            android:textSize="30dp"/>
+
+        <LinearLayout
+            android:id="@+id/player_line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/green">
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_marginTop="17dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Player: "
+                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Player: "
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/text_field1"
+                android:inputType="textPersonName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Playername"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:id="@+id/confirm1"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/check"
+                android:layout_gravity="right"
+                android:onClick="enterPlayer"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@color/grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Player 2"
+            android:textSize="30dp"/>
+
+        <LinearLayout
+            android:id="@+id/player_line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/green">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_marginTop="17dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Player: "
+                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Player: "
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/text_field2"
+                android:inputType="textPersonName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Playername"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:id="@+id/confirm2"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/check"
+                android:layout_gravity="right"
+                android:onClick="enterPlayer"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:layout_marginTop="5dp"
+        android:background="#1D1D1D">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="startGameplay"
+            android:src="@drawable/play"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
