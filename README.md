@@ -3,9 +3,9 @@
 * Michiel Boswijk, michiel.boswijk@gmail.com
 * University of Amsterdam, 10332553
 
-This is the first version (beta release) of the Ghost Word Game.
+This is the final version (Alpha release) of the Ghost Word Game.
 
-To Download the project, go to tab `releases', and then click 'beta'. After that you can download the project. Since this project was made in Android Studio, you will need this software to run the project. After you have downloaded the project, extract it and place the project where you want. Now in Android Studio, press CTRL + O to open a project, navigate to the project folder and click on the GhostWordGame folder. After you press OK, you will be able to run the application on a device or emulator (by pressing Shift + F10).
+To Download the project, go to tab `releases', and then click on the desired release. The most recent release is called 'Alpha1.0'. After that you can download the project. Since this project was made in Android Studio, you will need this software to run the project. After you have downloaded the project, extract it and place the project where you want. Now in Android Studio, press CTRL + O to open a project, navigate to the project folder and click on the GhostWordGame folder. After you press OK, you will be able to run the application on a device or emulator (by pressing Shift + F10).
 
 #### Version
 1.0
@@ -17,13 +17,12 @@ To Download the project, go to tab `releases', and then click 'beta'. After that
 * Dutch and English language support
 * Choice of themes
 * Option to clear highscores/names
-* Prevents loss of gamestate after focus switch of device
-* Ability to start new game at all times
+* Prevents loss of gamestate after focus switch of devicees
 
 ##### Possible future features
 
 * Versus Computer Option
-* Sound selection
+* Sound options
 
 ### User Experience
 
