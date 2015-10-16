@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Language: "
+                android:text="@string/layout_language"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginRight="10dp"
@@ -66,7 +66,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Theme: "
+                android:text="@string/layout_theme"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginRight="10dp"
@@ -111,7 +111,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Clear History: "
+                android:text="@string/layout_history"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginRight="10dp"
@@ -135,60 +135,12 @@
             android:id="@+id/clear_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Apply"
+            android:text="@string/apply_button_text"
             android:layout_gravity="center"
             android:onClick="clearAll"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"/>
 
     </LinearLayout>
-
-    <!--
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/grey">
-
-        <LinearLayout
-            android:layout_width="260dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Disable Sound: "
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginEnd="10dp"
-                android:gravity="center_vertical"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:id="@+id/colored_line3"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green"
-                android:layout_gravity="center_vertical">
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <ToggleButton
-            android:id="@+id/sounds_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textOff="False"
-            android:textOn="True"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"/>
-
-    </LinearLayout>
-    -->
 
 </LinearLayout>

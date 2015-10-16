@@ -2,9 +2,10 @@
  * WinnerScreen class (Activity!)
  *
  * Class implements the screen displayed when the game is ended and a winner has been chosen.
+ * Handles all visualization and menu item presses in the activity.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 package com.michielboswijk.ghostwordgame;
 
@@ -22,7 +23,7 @@ public class WinnerScreen extends AppCompatActivity {
 
     /* Declare class variables. */
     private String winner, loser, word;
-    private boolean wordCreated;;
+    private boolean wordCreated;
 
     /* Method called on creation of the class. */
     @Override
@@ -38,7 +39,7 @@ public class WinnerScreen extends AppCompatActivity {
         TextView winnerField = (TextView) findViewById(R.id.winner_display);
         winnerField.setText(winner);
         TextView reasonField = (TextView) findViewById(R.id.winner_reason);
-        if(wordCreated) {
+        if (wordCreated) {
             reasonField.setText(loser + " has made a word " + "(" + word.toLowerCase() + ")");
         } else {
             reasonField.setText(loser + " has made a non-existing combination " + "(" + word.toLowerCase() + ")");

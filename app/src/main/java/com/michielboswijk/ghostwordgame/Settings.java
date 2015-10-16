@@ -2,16 +2,18 @@
  * Settings class (Activity!)
  *
  * Class implements the activity that displays the settings.
+ * Handles all visualization and menu item presses in the activity.
  * Handles the toggling of different settings (language, and theme), as well as a clear data option.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package. */
 package com.michielboswijk.ghostwordgame;
 
 //TODO: Fix back option.
+//TODO: check onOptionsSelected????
 
 /* Necessary imports. */
 import android.app.DialogFragment;
@@ -21,12 +23,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class Settings extends AppCompatActivity {
@@ -50,9 +51,9 @@ public class Settings extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         fromGamePlay = extras.getBoolean("fromGamePlay");
 
+        /* Initialize views and check if buttons should be disabled (if accessed from game play). */
         initViews();
-
-        if(fromGamePlay) {
+        if (fromGamePlay) {
             disableButtons();
         }
 
@@ -67,28 +68,6 @@ public class Settings extends AppCompatActivity {
         initLanguageListener();
         initThemeListener();
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_settings, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        } else if(id == R.id.home){
-            this.finish();
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
 
     /* Method for applying a preference passed as a string. */
     public void applyPreferences(String pref) {
@@ -116,10 +95,11 @@ public class Settings extends AppCompatActivity {
         editor.apply();
     }
 
+    /* Method called when back button of the device if pressed. */
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if(fromGamePlay) {
+        if (fromGamePlay) {
             Intent gamePlay = new Intent(this, GamePlay.class);
             startActivity(gamePlay);
             finish();
@@ -128,13 +108,7 @@ public class Settings extends AppCompatActivity {
             startActivity(mainMenu);
             finish();
         }
-
-
-
-
     }
-
-
 
 /*------------------------------------------------------------------------------------------------*/
 /* OnClick/Toggle methods                                                                         */
@@ -142,7 +116,6 @@ public class Settings extends AppCompatActivity {
 
     /* Method for setting up the listener for the language toggle button. */
     public void initLanguageListener() {
-
         /* change display of button depending on the saved language choice. */
         if (usedSettings.getLanguage().equals("NL")) {
             toggleLanguage.setChecked(true);
@@ -167,7 +140,6 @@ public class Settings extends AppCompatActivity {
 
     /* Method for setting up the listener for the theme toggle button. */
     public void initThemeListener() {
-
         if (usedSettings.getTheme().equals("Orange")) {
             toggleTheme.setChecked(true);
             applyTheme("Orange");
@@ -223,7 +195,8 @@ public class Settings extends AppCompatActivity {
      * while in-game but they can be viewed (e.g. when the user forgets which language is set).
      */
     public void disableButtons() {
-        if(fromGamePlay) {
+        if (fromGamePlay) {
+            Toast.makeText(getApplicationContext(), R.string.toast_settings_application, Toast.LENGTH_LONG).show();
             toggleTheme.setEnabled(false);
             applyButton.setEnabled(false);
             toggleLanguage.setEnabled(false);

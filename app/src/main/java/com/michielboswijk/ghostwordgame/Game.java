@@ -2,10 +2,10 @@
  * Game class
  *
  * Class implements a game object.
- * Used to create functionality for playing a single ghost word game.
+ * Used to create the functionality for playing a single ghost word game.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package .*/
@@ -41,13 +41,13 @@ public class Game {
 
     /* Method called when user adds a letter to the word. */
     public void guess(String guess) {
-
         /* Send guess to filter and update current word. */
         myLexicon.filter(guess);
         currentWord += guess;
 
         /* If lexicon is empty, combination can't make a word. */
         if (myLexicon.count() == 0) {
+            System.out.println(myLexicon.count());
             wrongGuess = true;
         /* If it can still make a word, it may be up to 3 characters long even if it is a word. */
         } else if (currentWord.length() <= 3){

@@ -3,8 +3,8 @@
  *
  * Class implements an alert dialog for confirming data deletion.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package. */

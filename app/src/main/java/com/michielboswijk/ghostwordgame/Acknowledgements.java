@@ -8,9 +8,6 @@
  * Last updated: 16-10-2015
  */
 
-//TODO delete excess code
-//TODO change dates headers
-
 /* Reference package. */
 package com.michielboswijk.ghostwordgame;
 

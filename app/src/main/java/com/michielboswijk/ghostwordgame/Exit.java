@@ -3,8 +3,8 @@
  *
  * Class implements an alert dialog for confirming leaving the application.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package. */
@@ -23,7 +23,6 @@ public class Exit extends DialogFragment {
     /* Method called on creation of the dialog. */
     @Override
     public Dialog onCreateDialog (Bundle SaveInstanceState) {
-
         /* Get context from current activity.*/
         Context context = getActivity();
 

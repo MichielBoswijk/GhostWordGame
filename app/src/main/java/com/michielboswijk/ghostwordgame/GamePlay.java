@@ -2,11 +2,11 @@
  * GamePlay class (Activity!)
  *
  * Class implements the activity that the game is played in.
- * Handles all visualization and menu item presses.
+ * Handles all visualization and menu item presses in the activity.
  * Communicates with the Game class to provide a complete playable game.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package. */
@@ -66,11 +66,8 @@ public class GamePlay extends AppCompatActivity {
         game = new Game(myLexicon);
 
         /* Make sure turns are correct when game is loaded. */
-        if (previousGameLoaded) {
-
-            if(playerTurn == game.turn()) {
-                game.changeTurn();
-            }
+        if (previousGameLoaded && playerTurn == game.turn()) {
+            game.changeTurn();
         }
 
         /* Get playerTurn, make sure the right player is displayed and update the Game State. */
@@ -110,6 +107,7 @@ public class GamePlay extends AppCompatActivity {
             Intent mainMenu = new Intent(this, IntroScreen.class);
             startActivity(mainMenu);
             finish();
+            return true;
         /* If settings, go to settings and pass info indicating the origin.
          * Current activity is not closed.
          */
@@ -117,6 +115,7 @@ public class GamePlay extends AppCompatActivity {
             Intent settings = new Intent(this, Settings.class);
             settings.putExtra("fromGamePlay", true);
             startActivity(settings);
+            return true;
         /* If highscores, go to highscores activity and pass (empty) winner.
          * Current activity is not closed.
          */
@@ -124,19 +123,23 @@ public class GamePlay extends AppCompatActivity {
             Intent highscores = new Intent(this, Highscores.class);
             highscores.putExtra("winner", "");
             startActivity(highscores);
+            return true;
         /* If How to Play, create dialog showing the HtP info. */
         } else if (id == R.id.action_htp) {
             DialogFragment htp = new HowToPlay();
             htp.show(getFragmentManager(), "dialog");
+            return true;
         /* If acknowledgements, create dialog showing the acknowledgements.  */
         } else if (id == R.id.action_ack) {
             DialogFragment acknowledgements = new Acknowledgements();
             acknowledgements.show(getFragmentManager(), "dialog");
+            return true;
         /* If name selection, start the Name Input activity. */
         } else if (id == R.id.action_names) {
             Intent names = new Intent(this, NameInput.class);
             startActivity(names);
             finish();
+            return true;
         } // Add more menu option-handlers here
 
         /* Return the pressed item. */
@@ -231,8 +234,7 @@ public class GamePlay extends AppCompatActivity {
      * The latter is true when a previously saved game is opened.
      */
     public void receiveSettingsInfo() {
-        /* Initialize origin intent, set */
-
+        /* Initialize boolean stating  */
         previousGameLoaded = false;
         String language = settings.getString("language", "222");
 
@@ -246,13 +248,12 @@ public class GamePlay extends AppCompatActivity {
             player1 = nameInputIntent.getExtras().getString("p1");
             player2 = nameInputIntent.getExtras().getString("p2");
             myLexicon = new Lexicon(getApplicationContext(), language);
-
         } catch (NullPointerException e) {
+            /* Otherwise, get settings from shared preferences. */
             player1 = settings.getString("player1", "222");
             player2 = settings.getString("player2", "222");
             playerTurn = settings.getInt("turn", -1);
             currentWord = settings.getString("word", "222");
-            System.out.println("Current word: " + currentWord);
             language = settings.getString("language", "222");
             myLexicon = new Lexicon(getApplicationContext(), language);
             previousGameLoaded = true;
@@ -291,7 +292,7 @@ public class GamePlay extends AppCompatActivity {
     public void indicatePlayer() {
         int playerTurn = game.turn();
 
-        if(playerTurn == 0) {
+        if (playerTurn == 0) {
             p1View.setTextColor(ContextCompat.getColor(this, R.color.white));
             p2View.setTextColor(ContextCompat.getColor(this, R.color.grey));
         } else {

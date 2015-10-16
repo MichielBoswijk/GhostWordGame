@@ -21,10 +21,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:text="Player 1"
-            android:textSize="30dp"/>
+            android:text="@string/player1"
+            android:textSize="30sp"/>
 
         <LinearLayout
+            android:orientation="horizontal"
             android:id="@+id/player_line1"
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -41,7 +42,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selected Player: "
+                android:text="@string/selected_player"
                 android:textSize="18sp"/>
 
             <Spinner
@@ -62,7 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Player: "
+                android:text="@string/new_player"
                 android:textSize="18sp"/>
 
             <EditText
@@ -70,16 +71,19 @@
                 android:inputType="textPersonName"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:hint="Playername"
-                android:layout_marginLeft="10dp"/>
+                android:hint="@string/player_name_hint"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"/>
 
             <ImageView
+                android:contentDescription="@string/check_mark"
                 android:id="@+id/confirm1"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:src="@drawable/check"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:onClick="enterPlayer"/>
 
         </LinearLayout>
@@ -100,10 +104,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:text="Player 2"
-            android:textSize="30dp"/>
+            android:text="@string/player2"
+            android:textSize="30sp"/>
 
         <LinearLayout
+            android:orientation="horizontal"
             android:id="@+id/player_line2"
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -120,7 +125,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selected Player: "
+                android:text="@string/selected_player"
                 android:textSize="18sp"/>
 
             <Spinner
@@ -141,7 +146,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Player: "
+                android:text="@string/new_player"
                 android:textSize="18sp"/>
 
             <EditText
@@ -149,16 +154,19 @@
                 android:inputType="textPersonName"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:hint="Playername"
-                android:layout_marginLeft="10dp"/>
+                android:hint="@string/player_name_hint"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"/>
 
             <ImageView
+                android:contentDescription="@string/check_mark"
                 android:id="@+id/confirm2"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:src="@drawable/check"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:onClick="enterPlayer"/>
 
         </LinearLayout>
@@ -173,6 +181,7 @@
         android:background="#1D1D1D">
 
         <ImageView
+            android:contentDescription="@string/play_button_descr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -180,9 +189,5 @@
             android:onClick="startGameplay"
             android:src="@drawable/play"/>
 
-
-
     </LinearLayout>
-
-
 </LinearLayout>

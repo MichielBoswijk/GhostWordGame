@@ -1,12 +1,13 @@
 /*
  * NameInput class (Activity!)
  *
- * Class implements the name selection menu.
+ * Class implements the name selection screen.
+ * Handles all visualization and menu item presses in the activity.
  * Class handles new name inputs, and links to the player list to provide the user with
  * the option to select a previously selected name.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 package com.michielboswijk.ghostwordgame;
 
@@ -63,7 +64,9 @@ public class NameInput extends AppCompatActivity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        if (getCurrentFocus() != null) {
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
         return true;
     }
 
@@ -132,8 +135,7 @@ public class NameInput extends AppCompatActivity {
                 finish();
             /* Display that the names are the same. */
             } else {
-                Toast.makeText(getApplicationContext(), R.string.toast_different_names,
-                        Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.toast_different_names, Toast.LENGTH_LONG).show();
             }
         /* If no names available, either an entered name is not confirmed or not entered at all. */
         } catch (Exception e) {
@@ -149,7 +151,6 @@ public class NameInput extends AppCompatActivity {
 
     /* Method called when check mark is pressed to confirm a name. */
     public void enterPlayer(View view) {
-
         /* Declare/initialize local variables. */
         String name;
         int spinnerPosition;
@@ -190,7 +191,6 @@ public class NameInput extends AppCompatActivity {
 
     /* Method for checking whether a valid name is entered. */
     public boolean validName(String name) {
-
         /* Name must not be empty, must not exceed 10 characters (for display purposes)
          * and must only contain letters. Returns true is valid, false otherwise. */
         if (name.equals("")) {

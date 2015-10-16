@@ -17,13 +17,14 @@
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/layout_bg">
-        
+
         <ImageView
+            android:contentDescription="@string/ghost_image_descr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:src="@drawable/g13"/>
-        
+            android:src="@drawable/ghost"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -34,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.5"
-                android:text="Ghost"
+                android:text="@string/intro_title_1"
                 android:textSize="60sp"
                 android:textColor="@color/green"
                 android:gravity="center"
@@ -46,12 +47,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.5"
-                android:text="Word Game"
+                android:text="@string/intro_title_2"
                 android:paddingTop="10dp"
                 android:gravity="center_horizontal"
                 android:textSize="25sp"
                 android:textColor="@color/green"/>
-            
+
         </LinearLayout>
 
     </RelativeLayout>
@@ -72,6 +73,7 @@
             android:layout_marginBottom="5dp">
 
             <ImageView
+                android:contentDescription="@string/play_button_descr"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/play"
@@ -80,6 +82,7 @@
                 android:onClick="startNameInput"/>
 
             <ImageView
+                android:contentDescription="@string/settings_button_descr"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/gear"
@@ -97,6 +100,7 @@
             android:layout_gravity="center_horizontal">
 
             <ImageView
+                android:contentDescription="@string/highscores_button_descr"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/highscores"
@@ -105,6 +109,7 @@
                 android:onClick="startHighscores"/>
 
             <ImageView
+                android:contentDescription="@string/info_button_descr"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/info"

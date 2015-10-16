@@ -2,14 +2,12 @@
  * Highscores class (Activity!)
  *
  * Class implements the activity that displays the highscores.
- * Handles all visualization and menu item presses.
+ * Handles all visualization and menu item presses in the activity.
  * Communicates with the PlayerList class to obtain the current player information.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
-
-// TODO check return true at onOptionsItemSelected
 
 /* Reference package. */
 package com.michielboswijk.ghostwordgame;
@@ -23,6 +21,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -82,14 +81,8 @@ public class Highscores extends AppCompatActivity {
         /* Obtain id of selected item. */
         int id = item.getItemId();
 
-        /* If intro screen (or main menu), start the intro screen activity. */
-        if (id == R.id.action_intro) {
-            Intent mainMenu = new Intent(this, IntroScreen.class);
-            startActivity(mainMenu);
-            finish();
-            return true;
         /* If new game, start the name input activity. */
-        } else if (id == R.id.action_new_game) {
+        if (id == R.id.action_new_game) {
             Intent names = new Intent(this, NameInput.class);
             startActivity(names);
             finish();
@@ -98,12 +91,13 @@ public class Highscores extends AppCompatActivity {
         } else if (id == R.id.action_ack) {
             DialogFragment acknowledgements = new Acknowledgements();
             acknowledgements.show(getFragmentManager(), "dialog");
+            return true;
         /* If exit, create a new dialog (dialog class handles button clicks). */
         } else if (id == R.id.action_exit) {
             DialogFragment exit = new Exit();
             exit.show(getFragmentManager(), "dialog");
             return true;
-        }
+        } // Add more menu option-handlers here
 
         /* Return the pressed item. */
         return super.onOptionsItemSelected(item);
@@ -120,7 +114,18 @@ public class Highscores extends AppCompatActivity {
     }
 
 /*------------------------------------------------------------------------------------------------*/
-/* Helper Methods                                                                                 */
+/* OnClick methods                                                                                */
+/*------------------------------------------------------------------------------------------------*/
+
+    /* Method for navigating to the intro screen/main menu. */
+    public void startIntroScreen(View view) {
+        Intent mainMenu = new Intent(this, IntroScreen.class);
+        startActivity(mainMenu);
+        finish();
+    }
+
+/*------------------------------------------------------------------------------------------------*/
+/* Helper methods                                                                                 */
 /*------------------------------------------------------------------------------------------------*/
 
     /* Clear the file containing names, scores and dates. */
@@ -141,7 +146,7 @@ public class Highscores extends AppCompatActivity {
      */
     public void updateData(String winner) {
         for (Player player : players) {
-            if(player.getName().equals(winner)) {
+            if (player.getName().equals(winner)) {
                 player.setDate();
                 Player updatedPlayer = new Player(winner, (player.getScore() + 1), player.getDate());
                 playerList.add(updatedPlayer); // This writes the new data to the txt file.

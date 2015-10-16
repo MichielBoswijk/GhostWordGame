@@ -3,9 +3,8 @@
     <string name="title_activity_name_input">Choose a name</string>
 
     <string name="ack">I would like to thank my friend Mees Daalder
-                        for designing any icons that are not listed below.\n\n
-                        Exit Icon: Designed by Tom Medley on \`thenounproject.com\'\n\n
-                        Check Icon: Designed by Siddharth Dasari on \`thenounproject.com\'</string>
+                        for designing any icons that are not listed below.\n\nIcons: \n\nExit Icon Designed by Tom Medley and Check Icon designed
+                        by Siddhart Dasari at https://thenounproject.com\n\nCode: \n\nCode for hiding the keyboard can be found at http://stackoverflow.com/questions/8697499/hide-keyboard-when-user-taps-anywhere-else-on-the-screen-in-android</string>
     <string name="htp">The Ghost Word Game is played with two people. In turns, the players
                         must enter a letter that together slowly forms a word. The objective of the
                         game is to add a letter so that no word is formed, but keeping in mind that a word could still be formed.\n\n
@@ -57,6 +56,36 @@
     <string name="toast_too_many">Too many characters</string>
     <string name="toast_letters_only">Please only use letters (and no spaces).</string>
     <string name="toast_no_players">No Previous Players in Memory</string>
-
-
+    <string name="layout_p1_placeholder">Player 1</string>
+    <string name="layout_p2_placeholder">Player 2</string>
+    <string name="layout_word_placeholder">WORD</string>
+    <string name="enter_button_text">Enter</string>
+    <string name="main_menu_button_text">Main Menu</string>
+    <string name="ghost_image_descr">ghost image</string>
+    <string name="intro_title_1">Ghost</string>
+    <string name="intro_title_2">Word Game</string>
+    <string name="play_button_descr">play button</string>
+    <string name="settings_button_descr">settings button</string>
+    <string name="highscores_button_descr">highscores button</string>
+    <string name="info_button_descr">info button</string>
+    <string name="player1">Player 1</string>
+    <string name="selected_player">Selected Player:</string>
+    <string name="new_player">New Player:</string>
+    <string name="player_name_hint">Playername</string>
+    <string name="player2">Player 2</string>
+    <string name="check_mark">check mark</string>
+    <string name="layout_language">Language:</string>
+    <string name="layout_theme">Theme:</string>
+    <string name="layout_history">Clear History:</string>
+    <string name="apply_button_text">Apply</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="winner_name_placeholder">WinnerName</string>
+    <string name="reason_placeholder">Reason player has won</string>
+    <string name="score_placeholder">Score</string>
+    <string name="date_placeholder">Date</string>
+    <string name="name_placeholder">PlayerName</string>
+    <string name="rank_placeholder">1</string>
+    <string name="rank_icon_descr">star icon displaying rank</string>
+    <string name="toast_error_file">Error opening the file.</string>
+    <string name="toast_settings_application">Please apply settings after you finish the game.</string>
 </resources>

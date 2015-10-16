@@ -12,12 +12,6 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_intro"
-        android:title="@string/action_intro"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/action_new_game"
         android:title="@string/action_new"
         android:orderInCategory="200"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.michielboswijk.ghostwordgame.WinnerScreen"
-    android:background="@color/black"
+    android:background="@drawable/background_winner"
     android:orientation="vertical">
 
     <TextView
@@ -12,7 +12,7 @@
         android:id="@+id/congrats_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Congratulations"
+        android:text="@string/congratulations"
         android:gravity="center"
         android:textSize="40sp"/>
 
@@ -21,7 +21,7 @@
         android:id="@+id/winner_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Playername"
+        android:text="@string/winner_name_placeholder"
         android:gravity="center"
         android:textSize="40sp"/>
 
@@ -29,12 +29,14 @@
         android:id="@+id/winner_reason"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reason player has won"
+        android:text="@string/reason_placeholder"
         android:layout_marginTop="20dp"
         android:textSize="15sp"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
 
     <ImageView
+        android:contentDescription="@string/highscores_button_descr"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="120dp"

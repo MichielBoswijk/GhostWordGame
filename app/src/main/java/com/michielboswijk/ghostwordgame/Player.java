@@ -4,8 +4,8 @@
  * Class implements a player object.
  * A player has a name, score and 'last played' date.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package .*/
@@ -21,9 +21,8 @@ import java.util.Locale;
 public class Player implements Comparable<Player>{
 
     /* Declare class variables. */
-    private String name;
+    private String name, date;
     private int score;
-    private String date;
 
     /* Constructor initializes class variables passed as arguments. */
     public Player(String playerName, int playerScore, String lastPlayed){

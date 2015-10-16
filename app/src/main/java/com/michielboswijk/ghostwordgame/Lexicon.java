@@ -2,11 +2,11 @@
  * Lexicon class
  *
  * Class implements a game lexicon object with a dictionary as a hash set.
- * Possible dictionaries: Dutch, English
+ * Possible dictionaries: Dutch, English.
  * Used to check for words and impossible character combinations.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Lst updated: 16-10-2015
  */
 
 //TODO speed up process by using vincents method
@@ -37,7 +37,6 @@ public class Lexicon {
      * depending on the word in the game.
      */
     public Lexicon(Context appContext, String language) {
-
         currentWord = "";
         context = appContext;
         lan = language;
@@ -50,7 +49,6 @@ public class Lexicon {
 
     /* Method for initializing hash set containing the dictionary. */
     public void initBaseLex() {
-
         /* Declare variables and initialize empty lexicon. */
         String dictType;
         String word;
@@ -81,41 +79,33 @@ public class Lexicon {
      * word combination.
      */
     public void filter(String filterString) {
-
-        /* Declare variables and add string to current word to form the word made by the players. */
+        /* Declare variables, add string to current word to form the word made by the players,
+         * and initialize temp lexicon.
+         */
         String word;
         Iterator myIterator;
         currentWord += filterString;
 
-        /* Iterate lexicon to remove all words that do not start with the current character
-         * combination in the game.
+        /* Iterate filtered lexicon to make sure only relevant words are iterated. The words that
+         * can still be made (that start with the current word) are added to a third lexicon
+         * that is then set to the filtered lexicon. This allows for a fast program since
+         * it minimizes the addition of items to any lexicons. Note: an efficient way to implement
+         * the iteration was discussed with classmate Vincent Erich!
          */
-        myIterator = baseLexicon.iterator();
-        while(myIterator.hasNext()) {
+        HashSet<String> tempLexicon = new HashSet<>();
+        myIterator = filteredLexicon.iterator();
+        while (myIterator.hasNext()) {
             word = (String) myIterator.next();
-            if(!word.startsWith(currentWord)) {
-                filteredLexicon.remove(word);
+            if (word.startsWith(currentWord)) {
+                tempLexicon.add(word);
             }
         }
-    }
-
-    /* Method for checking whether only one result is left. */
-    public String result() {
-        if (count() == 1) {
-            return filteredLexicon.iterator().next();
-        } else {
-            return null;
-        }
-    }
-
-    /* Method for clearing the filtered lexicon. */
-    public void reset() {
-        filteredLexicon.clear();
-        filteredLexicon.addAll(baseLexicon);
+        filteredLexicon = tempLexicon;
     }
 
     /* Method for returning the size of the filtered lexicon. */
     public int count() {
+        System.out.println(filteredLexicon.size());
         return filteredLexicon.size();
     }
 

@@ -4,8 +4,8 @@
  * Class implements an adapter used to link the list of all players to the list view where
  * the highscores are displayed.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package. */
@@ -63,7 +63,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
 
         /* Initialize view containing the star and determine if (and which) star must be shown. */
         ImageView star = (ImageView) theView.findViewById(R.id.hs_icon);
-        if(position == 0) {         // First place
+        if (position == 0) {         // First place
             star.setImageResource(R.drawable.star_gold);
         } else if (position == 1) { // Second place
             star.setImageResource(R.drawable.star_silver);
@@ -85,7 +85,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
 
         /* Set colored divider to chosen theme color. */
         LinearLayout divider = (LinearLayout) theView.findViewById(R.id.hs_divider);
-        if(color.equals("Orange")) {
+        if (color.equals("Orange")) {
             divider.setBackgroundColor(ContextCompat.getColor(context, R.color.orange));
         } else {
             divider.setBackgroundColor(ContextCompat.getColor(context, R.color.green));

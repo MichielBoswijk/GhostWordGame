@@ -2,14 +2,12 @@
  * IntroScreen class (Activity!)
  *
  * Class implements the initial screen of the application (Main Menu).
+ * Handles all visualization and menu item presses in the activity.
  * Class contains buttons for navigating to the name input, settings, how to play and highscores.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 10-10-2015
  */
-
-// TODO add icons with appropriate colors
-// TODO check if onRestoreInstanceState is necessary
 
 /* Reference package. */
 package com.michielboswijk.ghostwordgame;
@@ -82,10 +80,10 @@ public class IntroScreen extends AppCompatActivity {
             DialogFragment acknowledgements = new Acknowledgements();
             acknowledgements.show(getFragmentManager(), "dialog");
         /* If acknowledgements, create dialog showing the acknowledgements.  */
-        } else if(id == R.id.action_exit) {
+        } else if (id == R.id.action_exit) {
             DialogFragment exit = new Exit();
             exit.show(getFragmentManager(), "dialog");
-        }
+        } // Add more menu option-handlers here
 
         /* Return the pressed item. */
         return super.onOptionsItemSelected(item);
@@ -131,7 +129,7 @@ public class IntroScreen extends AppCompatActivity {
     /* Method for setting colors of visible widgets in the screen. */
     public void setColors() {
         String themeColor = settings.getString("theme", "222");
-        if(themeColor.equals("Orange")) {
+        if (themeColor.equals("Orange")) {
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.orange));
             title2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.orange));
         } else {

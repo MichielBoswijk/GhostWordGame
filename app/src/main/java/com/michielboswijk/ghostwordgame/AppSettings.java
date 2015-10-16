@@ -2,10 +2,10 @@
  * AppSettings class
  *
  * Class implements a settings object.
- * Its objects are used to set the settings from the activity.
+ * This class is used to initialize the settings in the corresponding activity.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package. */
@@ -22,7 +22,6 @@ public class AppSettings implements Serializable{
     /* Declare class variables. */
     private Context usedContext;
     private String language, theme, fileName;
-//    private boolean sound;
 
     /* Constructor of the class initializes the class variables to its default values. */
     public AppSettings(Context context) {
@@ -30,7 +29,6 @@ public class AppSettings implements Serializable{
         theme = "Green";
         usedContext = context;
         fileName = "playerInfo.txt";
-//        boolean sound = false;
     }
 
 /*------------------------------------------------------------------------------------------------*/
@@ -57,30 +55,10 @@ public class AppSettings implements Serializable{
         return theme;
     }
 
-//    /* Method for setting name of the file containing player data. */
-//    public void setFileName(String name) {
-//        fileName = name;
-//    }
-
     /* Method for getting name of the file containing player data. */
     public String getFileName() {
         return fileName;
     }
-
-//    /* Method for enabling sounds in the game. */
-//    public void enableSound(){
-//        sound = true;
-//    }
-
-//    /* Method for disabling sounds in the game. */
-//    public void disableSound() {
-//        sound = false;
-//    }
-
-//    /* Method for checking whether the sound is enabled or not. */
-//    public boolean soundEnabled() {
-//        return sound;
-//    }
 
 /*------------------------------------------------------------------------------------------------*/
 /* Helper Methods

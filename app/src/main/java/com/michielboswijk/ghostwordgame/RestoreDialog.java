@@ -3,8 +3,8 @@
  *
  * Class implements an alert dialog for prompting the user to load a previous unfinished game.
  *
- * Michiel Boswijk, michiel.boswijk@gmail.com
- * Date: 10-10-2015
+ * Author: Michiel Boswijk, michiel.boswijk@gmail.com
+ * Last updated: 16-10-2015
  */
 
 /* Reference package. */
@@ -41,12 +41,11 @@ public class RestoreDialog extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                SharedPreferences settings = context.getSharedPreferences("settings",
-                        Context.MODE_PRIVATE);
+                SharedPreferences settings = context.getSharedPreferences("settings", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = settings.edit();
 
                 /* Reset saved player1 value to null so dialog in into screen won't show again. */
-                editor.putString("player1", null);
+                editor.putString("savedGame", null);
                 editor.apply();
             }
         });
