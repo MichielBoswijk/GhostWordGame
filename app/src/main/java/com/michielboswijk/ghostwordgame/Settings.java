@@ -12,9 +12,6 @@
 /* Reference package. */
 package com.michielboswijk.ghostwordgame;
 
-//TODO: Fix back option.
-//TODO: check onOptionsSelected????
-
 /* Necessary imports. */
 import android.app.DialogFragment;
 import android.content.Context;

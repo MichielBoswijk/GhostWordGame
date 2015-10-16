@@ -14,6 +14,7 @@ package com.michielboswijk.ghostwordgame;
 /* Necessary imports. */
 import android.content.Context;
 import android.widget.Toast;
+
 import java.io.File;
 import java.io.Serializable;
 
@@ -32,7 +33,7 @@ public class AppSettings implements Serializable{
     }
 
 /*------------------------------------------------------------------------------------------------*/
-/* Getters and Setters
+/* Getters and Setters                                                                            */
 /*------------------------------------------------------------------------------------------------*/
 
     /* Method for setting dictionary language. */
@@ -61,7 +62,7 @@ public class AppSettings implements Serializable{
     }
 
 /*------------------------------------------------------------------------------------------------*/
-/* Helper Methods
+/* Helper Methods                                                                                 */
 /*------------------------------------------------------------------------------------------------*/
 
     /* Method for clearing the player info file (create a new file overwriting the previous one). */

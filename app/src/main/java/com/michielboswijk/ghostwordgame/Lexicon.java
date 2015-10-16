@@ -9,19 +9,18 @@
  * Lst updated: 16-10-2015
  */
 
-//TODO speed up process by using vincents method
-//TODO check unused methods
-
 /* Reference package .*/
 package com.michielboswijk.ghostwordgame;
 
 /* Necessary imports. */
 import android.content.Context;
 import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
 import java.util.HashSet;
 import java.util.Iterator;
 
