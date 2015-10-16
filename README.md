@@ -10,6 +10,12 @@ To Download the project, go to tab `releases', and then click on the desired rel
 #### Version
 1.0
 
+#### Requirements
+
+An android device with minimal SKD 14 (from this version the game guarantees a stable version).
+The targeted SDK is 23.
+A device with at least 1 GB of RAM is adviced.
+
 ## Features
 
 * Players are remembered after playing
@@ -24,7 +30,7 @@ To Download the project, go to tab `releases', and then click on the desired rel
 * Versus Computer Option
 * Sound options
 
-### User Experience
+### Inital Draft of User Experience
 
 The user is first presented with the initial screen (Screen 1). From here it has the options to start the game (Screen 2), check how to play (Extra screen 1), apply some settings (Extra screen 2), or check the highscores (Screen 5).  When the user presses the 'Play' button, it is take to a screen to select his name (Screen 2). There the user (each of the two users that is) has the option to select an existing name, or input a new game (which will take the user to Screen 2a/b). After all names are selected, the main screen is loaded (Screen 3). The name of the player (upper right and left of the screen) is in bold font when it is that users turn, and the word is displayed in the middle. When the game ends, the players are taken to the congratulations screen (Screen 4). Here the player has the option go directly to the hihscores list (or it can select other options for the menu, which are shown on Extra screen 3). From the highscore list, the player can directly start a new game, or again select from the options menu.
 
